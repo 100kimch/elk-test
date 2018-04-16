@@ -1,86 +1,41 @@
-<script>
-  var GoogleAuth;
-  var SCOPE = 'https://www.googleapis.com/auth/drive.metadata.readonly';
-  function handleClientLoad() {
-    // Load the API's client and auth2 modules.
-    // Call the initClient function after the modules load.
-    gapi.load('client:auth2', initClient);
-  }
+<!DOCTYPE html>
+<html>
 
-  function initClient() {
-    // Retrieve the discovery document for version 3 of Google Drive API.
-    // In practice, your app can retrieve one or more discovery documents.
-    var discoveryUrl = 'https://www.googleapis.com/travelpartner/v2.0/420042/hotels';
+<head>
+  <title>Simple Map</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
 
-    // Initialize the gapi.client object, which app uses to make API requests.
-    // Get API key and client ID from API Console.
-    // 'scope' field specifies space-delimited list of access scopes.
-    gapi.client.init({
-      'apiKey': 'AIzaSyB7J8473-JoBxbrVjzrmsYm0vBHu-RVtg4',
-      'discoveryDocs': [discoveryUrl],
-      'scope': SCOPE
-    }).then(function () {
-      GoogleAuth = gapi.auth2.getAuthInstance();
-
-      // Listen for sign-in state changes.
-      GoogleAuth.isSignedIn.listen(updateSigninStatus);
-
-      // Handle initial sign-in state. (Determine if user is already signed in.)
-      var user = GoogleAuth.currentUser.get();
-      setSigninStatus();
-
-      // Call handleAuthClick function when user clicks on
-      //      "Sign In/Authorize" button.
-      $('#sign-in-or-out-button').click(function () {
-        handleAuthClick();
-      });
-      $('#revoke-access-button').click(function () {
-        revokeAccess();
-      });
-    });
-  }
-
-  function handleAuthClick() {
-    if (GoogleAuth.isSignedIn.get()) {
-      // User is authorized and has clicked 'Sign out' button.
-      GoogleAuth.signOut();
-    } else {
-      // User is not signed in. Start Google auth flow.
-      GoogleAuth.signIn();
+    #map {
+      height: 100%;
     }
-  }
 
-  function revokeAccess() {
-    GoogleAuth.disconnect();
-  }
+    /* Optional: Makes the sample page fill the window. */
 
-  function setSigninStatus(isSignedIn) {
-    var user = GoogleAuth.currentUser.get();
-    var isAuthorized = user.hasGrantedScopes(SCOPE);
-    if (isAuthorized) {
-      $('#sign-in-or-out-button').html('Sign out');
-      $('#revoke-access-button').css('display', 'inline-block');
-      $('#auth-status').html('You are currently signed in and have granted ' +
-        'access to this app.');
-    } else {
-      $('#sign-in-or-out-button').html('Sign In/Authorize');
-      $('#revoke-access-button').css('display', 'none');
-      $('#auth-status').html('You have not authorized this app or you are ' +
-        'signed out.');
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
     }
-  }
+  </style>
+</head>
 
-  function updateSigninStatus(isSignedIn) {
-    setSigninStatus();
-  }
-</script>
+<body>
+  <div id="map"></div>
+  <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
 
-<button id="sign-in-or-out-button" style="margin-left: 25px">Sign In/Authorize</button>
-<button id="revoke-access-button" style="display: none; margin-left: 25px">Revoke access</button>
-
-<div id="auth-status" style="display: inline; padding-left: 25px"></div>
-<hr>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
-</script>
+</html>
