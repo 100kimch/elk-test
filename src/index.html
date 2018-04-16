@@ -8,7 +8,10 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
 
+<body>
+  <app-root></app-root>
   <script>
     var GoogleAuth;
     var SCOPE = 'https://www.googleapis.com/auth/drive.metadata.readonly';
@@ -88,10 +91,6 @@
     }
 
   </script>
-</head>
-
-<body>
-  <app-root></app-root>
   <button id="sign-in-or-out-button" style="margin-left: 25px">Sign In/Authorize</button>
   <button id="revoke-access-button" style="display: none; margin-left: 25px">Revoke access</button>
 
@@ -99,10 +98,7 @@
   <hr>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
-
-
-  </script>
+  <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
 </body>
 
 </html>
