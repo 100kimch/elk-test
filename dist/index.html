@@ -10,15 +10,14 @@
   function initClient() {
     // Retrieve the discovery document for version 3 of Google Drive API.
     // In practice, your app can retrieve one or more discovery documents.
-    var discoveryUrl = 'https://www.googleapis.com/discovery/v1/apis/drive/v3/rest';
+    var discoveryUrl = 'https://www.googleapis.com/travelpartner/v2.0/420042/hotels';
 
     // Initialize the gapi.client object, which app uses to make API requests.
     // Get API key and client ID from API Console.
     // 'scope' field specifies space-delimited list of access scopes.
     gapi.client.init({
-      'apiKey': 'YOUR_API_KEY',
+      'apiKey': 'AIzaSyB7J8473-JoBxbrVjzrmsYm0vBHu-RVtg4',
       'discoveryDocs': [discoveryUrl],
-      'clientId': 'YOUR_CLIENT_ID',
       'scope': SCOPE
     }).then(function () {
       GoogleAuth = gapi.auth2.getAuthInstance();
