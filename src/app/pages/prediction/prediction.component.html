@@ -1,0 +1,20 @@
+<div id="path">
+  Simulation > Prediction
+</div>
+
+<section>
+  <h1>Overview</h1>
+  <app-main-tile></app-main-tile>
+  <div class="row">
+    <app-group [title]="'Chart'" class="f2">
+      <iframe [src]="clean(chartUrl)"></iframe>
+    </app-group>
+    <app-group [title]="'Prices'">
+      <app-table [type]="'priceList'"></app-table>
+    </app-group>
+    <app-group [title]="'3rd Party Platforms'">
+      <app-table [type]="'platformList'"></app-table>
+    </app-group>
+  </div>
+
+</section>

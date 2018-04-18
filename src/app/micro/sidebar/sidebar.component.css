@@ -1,0 +1,43 @@
+@keyframes intro {
+  to {
+    opacity: 1;
+    margin: 0;
+  }
+}
+:host {
+  display: block;
+  width: 250px;
+  height: 100vh;
+  margin: 0;
+  padding: 3em 2em;
+  background: url('/assets/img/bg_fabric_black.png');
+  color: white;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 3em black;
+  animation: intro 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  margin: 0 -250px;
+  transition: opacity 1s, margin 1s;
+}
+
+#logo {
+  margin: 0 -2em -90px -2em;
+}
+
+h1 {
+  text-align: right;
+  margin-bottom: 2em;
+}
+
+li {
+  list-style: none;
+  text-align: right;
+  font-size: 1.2em;
+  color: #ddd;
+  padding: 1.5em 0.5em 0.5em 0;
+  margin-left: -2em;
+  margin-right: -0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}

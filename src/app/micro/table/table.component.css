@@ -1,0 +1,52 @@
+:host {
+  display: table;
+  width: 100%;
+  background: none;
+  font-size: 1em;
+  text-align: center;
+  padding: 0;
+  /* word-wrap: break-word; */
+  /* border-spacing set instead of margin */
+  /* border-spacing: 10px; */
+  /* border-collapse: separat e; */
+}
+
+header {
+  display: table-row;
+  font-size: 1em;
+  line-height: 300%;
+  font-weight: normal;
+  background: #666;
+  color: white;
+}
+
+header .cell {
+  display: table-cell;
+  padding: 0em 0.3em;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  padding: 0.5em 0.3em;
+}
+
+.columnGroup {
+  display: table-column-group;
+}
+
+.column {
+  display: table-column;
+  color: red;
+}
+
+.red {
+  color: red;
+}
+
+.endline {
+  border-bottom: 1px solid #333;
+}

@@ -1,0 +1,16 @@
+<header>
+  <!-- <span class="cell" *ngFor="let category of categories[type]" [innerHTML]="category"></span> -->
+  <span class="cell" *ngIf="type==='priceList'">Location</span>
+  <span class="cell" *ngIf="type==='platformList'">Platform</span>
+  <span class="cell">Room</span>
+  <span class="cell">Price</span>
+</header>
+<div class="column red"></div>
+<div class="column"></div>
+<div class="column"></div>
+<div class="row" *ngFor="let record of selected" [ngClass]="{'endline': record['isEnd']}">
+  <span class="cell" *ngIf="type==='priceList'">{{ record['location'] }}</span>
+  <span class="cell" *ngIf="type==='platformList'">{{ record['platform'] }}</span>
+  <span class="cell">{{ record['room'] }}</span>
+  <span class="cell">{{ record['price'] }}</span>
+</div>
