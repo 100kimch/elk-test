@@ -1,4 +1,10 @@
 :host {
+  display: block;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+#container {
   display: table;
   width: 100%;
   background: none;
@@ -12,12 +18,21 @@
   /* border-collapse: separat e; */
 }
 
+#hider {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 2em;
+  margin-top: -2em;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
 header {
   display: table-row;
   font-size: 1em;
   line-height: 300%;
   font-weight: normal;
-  background: #666;
+  background: #888;
   color: white;
 }
 
@@ -28,6 +43,23 @@ header .cell {
 
 .row {
   display: table-row;
+}
+
+.row:nth-child(2n) {
+  background: #dfdfdf;
+}
+
+.party .row:nth-child(2n) {
+  background: initial;
+}
+
+.row:hover, .party .row:hover {
+  background: #bbb;
+  color: white;
+}
+
+.currency {
+  text-align: right;
 }
 
 .cell {
@@ -49,5 +81,5 @@ header .cell {
 }
 
 .endline {
-  border-bottom: 1px solid #333;
+  border-top: 1px solid #999;
 }

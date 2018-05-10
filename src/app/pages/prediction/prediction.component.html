@@ -4,17 +4,78 @@
 
 <section>
   <h1>Overview</h1>
-  <app-main-tile></app-main-tile>
-  <div class="row">
-    <app-group [title]="'Chart'" class="f2">
-      <iframe [src]="clean(chartUrl)"></iframe>
+  <app-main-tile (clicked)="onClick($event)"></app-main-tile>
+  <div class="row" *ngIf="cPage==1">
+    <app-group [title]="'Price Comparison'" class="f2">
+      <app-pred1 [roomType]="chartData['pred_1']"></app-pred1>
+      <!-- <app-high-chart></app-high-chart> -->
+      <!-- <app-fusion-chart [gid]="'pred_1'" [priceList]="chartData['pred_1']"></app-fusion-chart> -->
     </app-group>
-    <app-group [title]="'Prices'">
-      <app-table [type]="'priceList'"></app-table>
+    <!-- <iframe [src]="clean(chartUrl)"></iframe> -->
+    <app-group [title]="'Current Price'">
+      <app-table [type]="'priceList'" [priceList]="priceList" (chartDataType)="setDataset($event)"></app-table>
     </app-group>
-    <app-group [title]="'3rd Party Platforms'">
-      <app-table [type]="'platformList'"></app-table>
+    <app-group [title]="'Platforms'">
+      <app-table [type]="'platformList'" [priceList]="partyList"></app-table>
     </app-group>
   </div>
 
+  <div class="row" *ngIf="cPage==2">
+    <app-group [title]="'Prediction'" class="f2">
+      <app-pred2 [roomType]="chartData['pred_2']"></app-pred2>
+      <!-- <app-fusion-chart [gid]="'pred_2'" [priceList]="chartData['pred_2']"></app-fusion-chart> -->
+    </app-group>
+    <!-- <iframe [src]="clean(chartUrl)"></iframe> -->
+    <app-group [title]="'Forecast Price'">
+      <app-table [type]="'priceList'" [priceList]="priceList" (chartDataType)="setDataset($event)"></app-table>
+    </app-group>
+    <app-group [title]="'Recommend'">
+      <input type="date">
+      <div id="recommendBox">
+        <li>
+          <img src="/assets/img/logo_hc.jpeg">
+          <h1>123,000</h1>
+        </li>
+      </div>
+    </app-group>
+  </div>
+
+  <div class="row" *ngIf="cPage==3">
+    <app-group [title]="'Revenue'" class="f2">
+      <app-fusion-chart [gid]="'pred_1'"></app-fusion-chart>
+    </app-group>
+    <div class="crossBox">
+      <app-group [title]="'Property'">
+        <app-fusion-chart [gid]="'pred_4'"></app-fusion-chart>
+      </app-group>
+      <app-group [title]="'Profit'">
+        <app-fusion-chart [gid]="'pred_5'"></app-fusion-chart>
+      </app-group>
+    </div>
+  </div>
+  <div class="row" *ngIf="cPage==4">
+    <app-group [title]="'Weight per Week'" class="f2">
+      <app-pred1></app-pred1>
+      <!-- <app-fusion-chart [gid]="'pred_1'"></app-fusion-chart> -->
+    </app-group>
+    <div class="crossBox">
+      <app-group [title]="'Event Frequency'">
+        <app-fusion-chart [gid]="'pred_4'"></app-fusion-chart>
+      </app-group>
+      <app-group [title]="'Flight Frequency'">
+        <app-fusion-chart [gid]="'pred_5'"></app-fusion-chart>
+      </app-group>
+    </div>
+  </div>
 </section>
+
+<app-popup id="p1">
+  <h2>Select 3rd Party Platforms</h2>
+  <div id="lists">
+    <img src="/assets/img/logo_ab.png" alt="">
+    <img src="/assets/img/logo_hj.png" alt="">
+    <img src="/assets/img/logo_ho.png" alt="">
+    <img src="/assets/img/logo_hc.jpeg" alt="">
+    <img src="/assets/img/logo_ex.jpg" alt="">
+  </div>
+</app-popup>

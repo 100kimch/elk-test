@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from '../app.component';
 import { PredictionComponent } from '../pages/prediction/prediction.component';
+import { DashboardComponent } from '../pages/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
       {
         path: 'prediction',
         component: PredictionComponent,
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
       }
     ],
   },

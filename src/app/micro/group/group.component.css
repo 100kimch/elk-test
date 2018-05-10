@@ -1,5 +1,6 @@
 :host {
   flex: 1;
+  margin-bottom: 0.25em;
 }
 
 .f2 {
@@ -9,8 +10,8 @@
 article {
   display: block;
   flex: 1;
-  height: 35em;
-  background: #ddd;
+  min-height: 20em;
+  background: #eee;
   border: 1px solid #666;
 }
 
@@ -21,9 +22,108 @@ h1 {
   color: white;
 }
 
+:host /deep/ .subbar {
+  color: white;
+  display: flex;
+}
+
+:host /deep/ .subbar div {
+  flex: 1;
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+:host /deep/ .subbar strong {
+  font-size: 1.5em;
+}
+
+:host /deep/ .subbar p {
+  margin: 0;
+}
+
+.colored h1:after {
+  display: inline-block;
+  position: relative;
+  float: right;
+  width: 1em;
+  height: 1em;
+  content: '';
+  background-image: url('/assets/img/icon_chart.png');
+  background-size: 1em 1em;
+}
+
+.colored.c1 h1,
+.colored.c1 /deep/ .subbar {
+  background: #CB6161;
+  border-top: 1px solid #E37E7E;
+}
+
+.colored.c1,
+.colored.c1 * {
+  border-color: #D53636;
+}
+
+.colored.c2 h1,
+.colored.c2 /deep/ .subbar {
+  background: #6F61CB;
+  border-top: 1px solid #977EE3;
+}
+
+.colored.c2,
+.colored.c2 * {
+  border-color: #5C36D5;
+}
+
+.colored.c3 h1,
+.colored.c3 /deep/ .subbar {
+  background: #738A97;
+  border-top: 1px solid #9AACBD;
+}
+
+.colored.c3,
+.colored.c3 * {
+  border-color: #92AABA;
+}
+
+.colored.c4 h1,
+.colored.c4 /deep/ .subbar {
+  background: #CB9761;
+  border-top: 1px solid #E3B27E;
+}
+
+.colored.c4,
+.colored.c4 * {
+  border-color: #D58636;
+}
+
+.colored.c5 h1,
+.colored.c5 /deep/ .subbar {
+  background: #62B88E;
+  border-top: 1px solid #6CD3A4;
+
+
+}
+
+.colored.c5,
+.colored.c5 * {
+  border-color: #36D57F;
+}
+
 :host /deep/ iframe {
   width: 100%;
   min-width: 300px;
   height: 32em;
   border: none;
+}
+
+:host /deep/ input[type="date"] {
+  position: relative;
+  margin-top: -34px;
+  margin-right: 5px;
+  padding: 0 0.5em;
+  height: 24px;
+  float: right;
+  border-radius: 10px; 
+  border: none;
+  text-align: center;
 }

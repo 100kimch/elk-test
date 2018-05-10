@@ -1,0 +1,92 @@
+<div id="path">
+  Dashboard > Summary
+</div>
+
+<section>
+  <h1>Status</h1>
+  <div class="row">
+    <app-group [gid]="'colored c1'" [title]="'Hotels'">
+      <div class="subbar">
+        <div>
+          <strong>2</strong>
+          <p>Quantity</p>
+        </div>
+        <div>
+          <strong>14</strong>
+          <p>Avg. Rooms.</p>
+        </div>
+      </div>
+      <app-dash1></app-dash1>
+      <!-- <app-fusion-chart [gid]="'dash_1'"></app-fusion-chart> -->
+    </app-group>
+    <app-group [gid]="'colored c2'" [title]="'Reserved'">
+      <div class="subbar">
+        <div>
+          <strong>121</strong>
+          <p>Quantity</p>
+        </div>
+        <div>
+          <strong>28</strong>
+          <p>Block Sales</p>
+        </div>
+      </div>
+      <app-dash2></app-dash2>
+      <!-- <app-fusion-chart [gid]="'dash_2'"></app-fusion-chart> -->
+    </app-group>
+    <app-group [gid]="'colored c3'" [title]="'Data Collection'">
+      <div class="subbar">
+        <div>
+          <strong>7201</strong>
+          <p>Quantity</p>
+        </div>
+        <div>
+          <strong>37000</strong>
+          <p>Price Qty</p>
+        </div>
+      </div>
+      <app-dash3></app-dash3>
+      <!-- <app-fusion-chart [gid]="'dash_3'"></app-fusion-chart> -->
+    </app-group>
+    <app-group [gid]="'colored c4'" [title]="'Competitiveness'">
+      <div class="subbar">
+        <div>
+          <strong>5
+            07</strong>
+          <p>Avg. High</p>
+        </div>
+        <div>
+          <strong>405</strong>
+          <p>Avg. Low</p>
+        </div>
+      </div>
+      <app-dash4></app-dash4>
+      <!-- <app-fusion-chart [gid]="'dash_4'"></app-fusion-chart> -->
+    </app-group>
+    <app-group [gid]="'colored c5'" [title]="'Billing'">
+      <div class="subbar">
+        <div>
+          <strong>0</strong>
+          <p>Own Cost</p>
+        </div>
+        <div>
+          <strong>444.67</strong>
+          <p>Avg. Cos
+            t</p>
+        </div>
+      </div>
+      <app-dash5></app-dash5>
+      <!-- <app-fusion-chart [gid]="'dash_5'"></app-fusion-chart> -->
+    </app-group>
+  </div>
+  <div class="row">
+    <app-group [title]="'Actual Status'" class="f3">
+      <app-dash6></app-dash6>
+      <!-- <app-fusion-chart [gid]="'dash_6'"></app-fusion-chart> -->
+    </app-group>
+    <app-group [title]="'Prediction'" class="f2">
+      <!-- <app-fusion-chart [gid]="'pred_2'" [priceList]="priceList['BS']['Standard']"></app-fusion-chart> -->
+      <app-pred2 [roomType]="chartData['pred_2']"></app-pred2>
+    </app-group>
+  </div>
+
+</section>

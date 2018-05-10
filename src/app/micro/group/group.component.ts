@@ -7,10 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class GroupComponent implements OnInit {
   @Input('title') title;
+  @Input('gid') gid;
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.gid);
   }
 
 }

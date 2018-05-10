@@ -1,0 +1,152 @@
+{
+    "Standard": [
+      {
+        "platform": "Hotels.com",
+        "roomname": "Standard",
+        "value": "22,000",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotels.com",
+        "roomname": "Deluxe",
+        "value": "11,700",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotels.com",
+        "roomname": "Sweet",
+        "value": "11,200",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotels Combine",
+        "roomname": "Standard",
+        "value": "22,500",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotels Combine",
+        "roomname": "Deluxe",
+        "value": "22,000",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotels Combine",
+        "roomname": "Sweet",
+        "value": "63,000",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotelnjoy",
+        "roomname": "Standard",
+        "value": "82,500",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotelnjoy",
+        "roomname": "Deluxe",
+        "value": "16,000",
+        "isEnd": false
+      }
+    ],
+    "Deluxe": [
+      {
+        "platform": "Expedia",
+        "roomname": "Standard",
+        "value": "22,000",
+        "isEnd": false
+      },
+      {
+        "platform": "Expedia",
+        "roomname": "Deluxe",
+        "value": "11,700",
+        "isEnd": false
+    },
+      {
+        "platform": "Hotels.com",
+        "roomname": "Sweet",
+        "value": "11,200",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotels Combine",
+        "roomname": "Standard",
+        "value": "22,500",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotels Combine",
+        "roomname": "Deluxe",
+        "value": "22,000",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotels Combine",
+        "roomname": "Sweet",
+        "value": "63,000",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotelnjoy",
+        "roomname": "Standard",
+        "value": "82,500",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotelnjoy",
+        "roomname": "Deluxe",
+        "value": "16,000",
+        "isEnd": false
+      }
+    ],
+    "Sweet": [
+      {
+        "platform": "Hotels.com",
+        "roomname": "Standard",
+        "value": "22,000",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotels.com",
+        "roomname": "Deluxe",
+        "value": "11,700",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotels.com",
+        "roomname": "Sweet",
+        "value": "11,200",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotels Combine",
+        "roomname": "Standard",
+        "value": "22,500",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotels Combine",
+        "roomname": "Deluxe",
+        "value": "22,000",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotels Combine",
+        "roomname": "Sweet",
+        "value": "63,000",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotelnjoy",
+        "roomname": "Standard",
+        "value": "82,500",
+        "isEnd": false
+      },
+      {
+        "platform": "Hotelnjoy",
+        "roomname": "Deluxe",
+        "value": "16,000",
+        "isEnd": false
+      }
+    ]
+}
