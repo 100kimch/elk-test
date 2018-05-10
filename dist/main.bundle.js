@@ -112,12 +112,14 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__charts_pred2_pred2_component__ = __webpack_require__("../../../../../src/app/charts/pred2/pred2.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__charts_pred3_pred3_component__ = __webpack_require__("../../../../../src/app/charts/pred3/pred3.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__charts_pred4_pred4_component__ = __webpack_require__("../../../../../src/app/charts/pred4/pred4.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -183,7 +185,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_14_angular4_fusioncharts__["a" /* FusionChartsModule */].forRoot(__WEBPACK_IMPORTED_MODULE_11_fusioncharts__, __WEBPACK_IMPORTED_MODULE_12_fusioncharts_fusioncharts_charts__, __WEBPACK_IMPORTED_MODULE_13_fusioncharts_themes_fusioncharts_theme_fint__),
                 __WEBPACK_IMPORTED_MODULE_17_angular2_highcharts__["ChartModule"].forRoot('highcharts')
             ],
-            providers: [],
+            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_30__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_30__angular_common__["d" /* HashLocationStrategy */] }],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
