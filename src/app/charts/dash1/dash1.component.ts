@@ -19,7 +19,7 @@ export class Dash1Component implements AfterViewInit {
       },
       colors: ['#CB6161', '#ED8383'],
       title: {
-        text: '<p>2 Quantity</p>',
+        text: '<p>34 Reserved</p>',
         verticalAlign: 'middle'
       },
       plotOptions: {
@@ -43,8 +43,8 @@ export class Dash1Component implements AfterViewInit {
         zMin: 0,
         name: 'Amount',
         data: [{
-          'name': 'Avg. Rooms',
-          'y': 172
+          'name': 'Avg. Week',
+          'y': 185
         }]
       },
       {
@@ -53,8 +53,8 @@ export class Dash1Component implements AfterViewInit {
         zMin: 0,
         name: 'Amount',
         data: [{
-          'name': 'Reserved',
-          'y': 168
+          'name': 'Available',
+          'y': 34
         }]
       }]
     });

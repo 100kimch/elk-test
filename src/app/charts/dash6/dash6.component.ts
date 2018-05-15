@@ -36,34 +36,51 @@ export class Dash6Component implements AfterViewInit {
       plotOptions: {
         series: {
           stacking: 'normal'
+        },
+        line: {
+          dataLabels: {
+            enabled: true
+          },
+          enableMouseTracking: false
         }
       },
       series: [
-      {
-        name: 'Available',
-        data: [121, 0, 0]
-      },
-      {
-        name: 'Not Available',
-        data: [62, 0, 0]
-      },
-      {
-        name: 'Block Sales',
-        data: [72, 0, 0]
-      },
-      {
-        name: 'Online',
-        data: [0, 121, 62]
-      },
-      {
-        name: 'Offline',
-        data: [0, 62, 71]
-      },
-      {
-        name: 'Block Sale',
-        data: [0, 73, 62]
+        {
+          name: 'Available',
+          data: [121, 0, 0]
+        },
+        {
+          name: 'Not Available',
+          data: [62, 0, 0]
+        },
+        {
+          name: 'Block Sales',
+          data: [72, 0, 0]
+        },
+        {
+          name: 'Online',
+          data: [0, 121, 62]
+        },
+        {
+          name: 'Offline',
+          data: [0, 62, 71]
+        },
+        {
+          name: 'Block Sale',
+          data: [0, 73, 62]
+        }
+      ],
+      dataLabels: {
+        enabled: true,
+        color: '#FFFFFF',
+        align: 'right',
+        format: '{point.y:.1f}', // one decimal
+        y: 10, // 10 pixels down from the top
+        style: {
+          fontSize: '13px',
+          fontFamily: 'Verdana, sans-serif'
+        }
       }
-    ]
     });
   }
 
