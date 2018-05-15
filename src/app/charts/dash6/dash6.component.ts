@@ -17,7 +17,7 @@ export class Dash6Component implements AfterViewInit {
         type: 'bar',
         backgroundColor: 'transparent'
       },
-      colors: ['#A97541', '#6F61CB', '#737373', '#CB9761', '#62B88E', '#738A97'],
+      colors: ['#A97541', '#CB6161', '#6F61CB', '#CB9761', '#62B88E', '#738A97'],
       title: {
         text: null
       },
