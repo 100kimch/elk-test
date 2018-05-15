@@ -1,152 +1,149 @@
 {
-    "BAA": [
-      {
-        "platform": "Hotels.com",
-        "roomname": "BAA",
-        "value": "22,000",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotels.com",
-        "roomname": "AAB",
-        "value": "11,700",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotels.com",
-        "roomname": "VAA",
-        "value": "11,200",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotels Combine",
-        "roomname": "BAA",
-        "value": "22,500",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotels Combine",
-        "roomname": "AAB",
-        "value": "22,000",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotels Combine",
-        "roomname": "VAA",
-        "value": "63,000",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotelnjoy",
-        "roomname": "BAA",
-        "value": "82,500",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotelnjoy",
-        "roomname": "AAB",
-        "value": "16,000",
-        "isEnd": false
-      }
-    ],
-    "AAB": [
-      {
-        "platform": "Expedia",
-        "roomname": "BAA",
-        "value": "22,000",
-        "isEnd": false
-      },
-      {
-        "platform": "Expedia",
-        "roomname": "AAB",
-        "value": "11,700",
-        "isEnd": false
+  "BAA": [{
+      "platform": "Hotels.com",
+      "roomname": "VAA",
+      "value": "137,100",
+      "isEnd": false
     },
-      {
-        "platform": "Hotels.com",
-        "roomname": "VAA",
-        "value": "11,200",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotels Combine",
-        "roomname": "BAA",
-        "value": "22,500",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotels Combine",
-        "roomname": "AAB",
-        "value": "22,000",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotels Combine",
-        "roomname": "VAA",
-        "value": "63,000",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotelnjoy",
-        "roomname": "BAA",
-        "value": "82,500",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotelnjoy",
-        "roomname": "AAB",
-        "value": "16,000",
-        "isEnd": false
-      }
-    ],
-    "VAA": [
-      {
-        "platform": "Hotels.com",
-        "roomname": "BAA",
-        "value": "22,000",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotels.com",
-        "roomname": "AAB",
-        "value": "11,700",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotels.com",
-        "roomname": "VAA",
-        "value": "11,200",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotels Combine",
-        "roomname": "BAA",
-        "value": "22,500",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotels Combine",
-        "roomname": "AAB",
-        "value": "22,000",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotels Combine",
-        "roomname": "VAA",
-        "value": "63,000",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotelnjoy",
-        "roomname": "BAA",
-        "value": "82,500",
-        "isEnd": false
-      },
-      {
-        "platform": "Hotelnjoy",
-        "roomname": "AAB",
-        "value": "16,000",
-        "isEnd": false
-      }
-    ]
+    {
+      "platform": "Hotels.com",
+      "roomname": "AAB",
+      "value": "39,210",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotels.com",
+      "roomname": "BAA",
+      "value": "49,038",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotels Combine",
+      "roomname": "VAA",
+      "value": "121,210",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotels Combine",
+      "roomname": "AAB",
+      "value": "49,038",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotels Combine",
+      "roomname": "BAA",
+      "value": "48,210",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotelnjoy",
+      "roomname": "BAA",
+      "value": "82,500",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotelnjoy",
+      "roomname": "AAB",
+      "value": "48,200",
+      "isEnd": false
+    }
+  ],
+  "AAB": [{
+      "platform": "Hotels.com",
+      "roomname": "VAA",
+      "value": "137,100",
+      "isEnd": false
+    },
+    {
+      "platform": "Expedia",
+      "roomname": "AAB",
+      "value": "39,210",
+      "isEnd": false
+    },
+    {
+      "platform": "Expedia",
+      "roomname": "BAA",
+      "value": "49,038",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotels Combine",
+      "roomname": "BAA",
+      "value": "48,210",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotels Combine",
+      "roomname": "AAB",
+      "value": "49,038",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotels Combine",
+      "roomname": "VAA",
+      "value": "121,210",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotelnjoy",
+      "roomname": "BAA",
+      "value": "82,500",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotelnjoy",
+      "roomname": "AAB",
+      "value": "48,200",
+      "isEnd": false
+    }
+  ],
+  "VAA": [{
+      "platform": "Hotels.com",
+      "roomname": "BAA",
+      "value": "49,038",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotels.com",
+      "roomname": "AAB",
+      "value": "39,210",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotels.com",
+      "roomname": "VAA",
+      "value": "137,100",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotels Combine",
+      "roomname": "BAA",
+      "value": "48,210",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotels Combine",
+      "roomname": "AAB",
+      "value": "49,038",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotels Combine",
+      "roomname": "VAA",
+      "value": "121,210",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotelnjoy",
+      "roomname": "BAA",
+      "value": "82,500",
+      "isEnd": false
+    },
+    {
+      "platform": "Hotelnjoy",
+      "roomname": "AAB",
+      "value": "48,200",
+      "isEnd": false
+    }
+  ]
 }
