@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as priceList from '../../../assets/data/sample.json';
+import * as priceList from '../../../assets/data/sample2.json';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,8 +10,8 @@ export class DashboardComponent implements OnInit {
   priceList = priceList;
 
   chartData = {
-    'pred_1': 'Standard',
-    'pred_2': 'Standard',
+    'pred_1': 'BAA',
+    'pred_2': 'BAA',
   };
 
   constructor() { }

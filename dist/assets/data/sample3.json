@@ -1,150 +1,150 @@
 {
-    "Standard": [
+    "BAA": [
       {
         "platform": "Hotels.com",
-        "roomname": "Standard",
+        "roomname": "BAA",
         "value": "22,000",
         "isEnd": false
       },
       {
         "platform": "Hotels.com",
-        "roomname": "Deluxe",
+        "roomname": "AAB",
         "value": "11,700",
         "isEnd": false
       },
       {
         "platform": "Hotels.com",
-        "roomname": "Sweet",
+        "roomname": "VAA",
         "value": "11,200",
         "isEnd": false
       },
       {
         "platform": "Hotels Combine",
-        "roomname": "Standard",
+        "roomname": "BAA",
         "value": "22,500",
         "isEnd": false
       },
       {
         "platform": "Hotels Combine",
-        "roomname": "Deluxe",
+        "roomname": "AAB",
         "value": "22,000",
         "isEnd": false
       },
       {
         "platform": "Hotels Combine",
-        "roomname": "Sweet",
+        "roomname": "VAA",
         "value": "63,000",
         "isEnd": false
       },
       {
         "platform": "Hotelnjoy",
-        "roomname": "Standard",
+        "roomname": "BAA",
         "value": "82,500",
         "isEnd": false
       },
       {
         "platform": "Hotelnjoy",
-        "roomname": "Deluxe",
+        "roomname": "AAB",
         "value": "16,000",
         "isEnd": false
       }
     ],
-    "Deluxe": [
+    "AAB": [
       {
         "platform": "Expedia",
-        "roomname": "Standard",
+        "roomname": "BAA",
         "value": "22,000",
         "isEnd": false
       },
       {
         "platform": "Expedia",
-        "roomname": "Deluxe",
+        "roomname": "AAB",
         "value": "11,700",
         "isEnd": false
     },
       {
         "platform": "Hotels.com",
-        "roomname": "Sweet",
+        "roomname": "VAA",
         "value": "11,200",
         "isEnd": false
       },
       {
         "platform": "Hotels Combine",
-        "roomname": "Standard",
+        "roomname": "BAA",
         "value": "22,500",
         "isEnd": false
       },
       {
         "platform": "Hotels Combine",
-        "roomname": "Deluxe",
+        "roomname": "AAB",
         "value": "22,000",
         "isEnd": false
       },
       {
         "platform": "Hotels Combine",
-        "roomname": "Sweet",
+        "roomname": "VAA",
         "value": "63,000",
         "isEnd": false
       },
       {
         "platform": "Hotelnjoy",
-        "roomname": "Standard",
+        "roomname": "BAA",
         "value": "82,500",
         "isEnd": false
       },
       {
         "platform": "Hotelnjoy",
-        "roomname": "Deluxe",
+        "roomname": "AAB",
         "value": "16,000",
         "isEnd": false
       }
     ],
-    "Sweet": [
+    "VAA": [
       {
         "platform": "Hotels.com",
-        "roomname": "Standard",
+        "roomname": "BAA",
         "value": "22,000",
         "isEnd": false
       },
       {
         "platform": "Hotels.com",
-        "roomname": "Deluxe",
+        "roomname": "AAB",
         "value": "11,700",
         "isEnd": false
       },
       {
         "platform": "Hotels.com",
-        "roomname": "Sweet",
+        "roomname": "VAA",
         "value": "11,200",
         "isEnd": false
       },
       {
         "platform": "Hotels Combine",
-        "roomname": "Standard",
+        "roomname": "BAA",
         "value": "22,500",
         "isEnd": false
       },
       {
         "platform": "Hotels Combine",
-        "roomname": "Deluxe",
+        "roomname": "AAB",
         "value": "22,000",
         "isEnd": false
       },
       {
         "platform": "Hotels Combine",
-        "roomname": "Sweet",
+        "roomname": "VAA",
         "value": "63,000",
         "isEnd": false
       },
       {
         "platform": "Hotelnjoy",
-        "roomname": "Standard",
+        "roomname": "BAA",
         "value": "82,500",
         "isEnd": false
       },
       {
         "platform": "Hotelnjoy",
-        "roomname": "Deluxe",
+        "roomname": "AAB",
         "value": "16,000",
         "isEnd": false
       }

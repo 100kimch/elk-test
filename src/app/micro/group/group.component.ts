@@ -12,7 +12,7 @@ export class GroupComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.gid);
+    // console.log(this.gid);
   }
 
 }

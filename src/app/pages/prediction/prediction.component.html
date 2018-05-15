@@ -13,9 +13,9 @@
     </app-group>
     <!-- <iframe [src]="clean(chartUrl)"></iframe> -->
     <app-group [title]="'Current Price'">
-      <app-table [type]="'priceList'" [priceList]="priceList" (chartDataType)="setDataset($event)"></app-table>
+      <app-table [type]="'priceList'" [priceList]="priceList" (chartDataType)="setDataset1($event)"></app-table>
     </app-group>
-    <app-group [title]="'Platforms'">
+    <app-group [title]="'Online Price'">
       <app-table [type]="'platformList'" [priceList]="partyList"></app-table>
     </app-group>
   </div>
@@ -27,14 +27,34 @@
     </app-group>
     <!-- <iframe [src]="clean(chartUrl)"></iframe> -->
     <app-group [title]="'Forecast Price'">
-      <app-table [type]="'priceList'" [priceList]="priceList" (chartDataType)="setDataset($event)"></app-table>
+      <app-table [type]="'predictionList'" [priceList]="priceList" (chartDataType)="setDataset2($event)"></app-table>
     </app-group>
-    <app-group [title]="'Recommend'">
-      <input type="date">
+    <app-group [title]="'Online Price'">
+      <!-- <input type="date"> -->
       <div id="recommendBox">
         <li>
-          <img src="/assets/img/logo_hc.jpeg">
+          <img id="hc" src="/assets/img/logo_hc.jpeg">
+          <!-- <h3>HotelsCombined</h3> -->
           <h1>123,000</h1>
+          <h2>+ 1.2% (5,000)</h2>
+        </li>
+        <li>
+          <img id="ex" src="/assets/img/logo_ex.jpg">
+          <!-- <h3>HotelsCombined</h3> -->
+          <h1>123,000</h1>
+          <h2>+ 1.2% (5,000)</h2>
+        </li>
+        <li>
+          <img id="ho" src="/assets/img/logo_ho.png">
+          <!-- <h3>HotelsCombined</h3> -->
+          <h1>123,000</h1>
+          <h2>+ 1.2% (5,000)</h2>
+        </li>
+        <li>
+          <img id="ho" src="/assets/img/logo_ho.png">
+          <!-- <h3>HotelsCombined</h3> -->
+          <h1>123,000</h1>
+          <h2>+ 1.2% (5,000)</h2>
         </li>
       </div>
     </app-group>
@@ -42,31 +62,38 @@
 
   <div class="row" *ngIf="cPage==3">
     <app-group [title]="'Revenue'" class="f2">
-      <app-fusion-chart [gid]="'pred_1'"></app-fusion-chart>
+      <!-- <app-fusion-chart [gid]="'pred_1'"></app-fusion-chart> -->
+      <app-pred3></app-pred3>
     </app-group>
     <div class="crossBox">
       <app-group [title]="'Property'">
-        <app-fusion-chart [gid]="'pred_4'"></app-fusion-chart>
+        <!-- <app-fusion-chart [gid]="'pred_4'"></app-fusion-chart> -->
+        <app-pred4></app-pred4>
       </app-group>
       <app-group [title]="'Profit'">
-        <app-fusion-chart [gid]="'pred_5'"></app-fusion-chart>
+        <!-- <app-fusion-chart [gid]="'pred_5'"></app-fusion-chart> -->
+        <app-pred5></app-pred5>
       </app-group>
     </div>
   </div>
+
   <div class="row" *ngIf="cPage==4">
     <app-group [title]="'Weight per Week'" class="f2">
-      <app-pred1></app-pred1>
       <!-- <app-fusion-chart [gid]="'pred_1'"></app-fusion-chart> -->
+      <app-pred3></app-pred3>
     </app-group>
     <div class="crossBox">
       <app-group [title]="'Event Frequency'">
-        <app-fusion-chart [gid]="'pred_4'"></app-fusion-chart>
+        <!-- <app-fusion-chart [gid]="'pred_4'"></app-fusion-chart> -->
+        <app-pred4></app-pred4>
       </app-group>
       <app-group [title]="'Flight Frequency'">
-        <app-fusion-chart [gid]="'pred_5'"></app-fusion-chart>
+        <!-- <app-fusion-chart [gid]="'pred_5'"></app-fusion-chart> -->
+        <app-pred5></app-pred5>
       </app-group>
     </div>
   </div>
+
 </section>
 
 <app-popup id="p1">

@@ -18,8 +18,8 @@ export class PredictionComponent implements OnInit {
   partyList = partyList;
 
   chartData = {
-    'pred_1': 'Standard',
-    'pred_2': 'Standard',
+    'pred_1': 'BAA',
+    'pred_2': 'BAA',
   };
 
   constructor(
@@ -34,13 +34,18 @@ export class PredictionComponent implements OnInit {
   onClick(clicked: number) {
     this.cPage = clicked;
     if (clicked == 1) {
-      this._elementRef.nativeElement.querySelector('app-popup#p1').classList.add('show');
+      // this._elementRef.nativeElement.querySelector('app-popup#p1').classList.add('show');
     }
   }
 
-  setDataset(changes) {
+  setDataset1(changes) {
     console.log('event: ', changes);
     this.chartData['pred_1'] = changes;
+  }
+
+  setDataset2(changes) {
+    console.log('event: ', changes);
+    this.chartData['pred_2'] = changes;
   }
 
   clean(url) {

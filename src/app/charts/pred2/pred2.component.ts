@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, Input, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, OnChanges, Input, ViewChild } from '@angular/core';
 import * as _data from '../../../assets/data/pred2.json';
 
 @Component({
@@ -6,11 +6,12 @@ import * as _data from '../../../assets/data/pred2.json';
   templateUrl: './pred2.component.html',
   styleUrls: ['./pred2.component.css']
 })
-export class Pred2Component implements AfterViewInit {
+export class Pred2Component implements AfterViewInit, OnChanges {
   @Input('roomType') roomType;
   @ViewChild('chart') sChart;
 
   chart;
+  data;
 
   constructor() { }
 
@@ -25,7 +26,8 @@ export class Pred2Component implements AfterViewInit {
         backgroundColor: 'transparent',
         spacingLeft: 20,
         spacingRight: 40,
-        type: 'line'
+        type: 'line',
+        height: '400px'
       },
       plotOptions: {
         lineWidth: 5
@@ -59,7 +61,14 @@ export class Pred2Component implements AfterViewInit {
           }
         }],
         tickPosition: 'inside',
-        startOnTick: true
+        startOnTick: true,
+      },
+
+      navigator: {
+        xAxis: {
+          softMin: 0,
+          tickPixelInterval: 10
+        }
       },
 
       series: data
@@ -67,19 +76,22 @@ export class Pred2Component implements AfterViewInit {
   }
 
   ngOnChanges(event) {
-    const roomType = event.roomType.currentValue;
-    console.log('changed: ', _data[roomType][0]['data']);
-    if (this.chart) {
-      this.chart.series.forEach((element, index, arr) => {
-        console.log(arr);
-        try {
-          arr[index].setData(_data[roomType][index]['data']);
-        } catch (e) {
-        }
-      });
-      this.chart.redraw();
+    if (this.data) {
+      const roomType = event;
+      console.log('roomType: ', roomType);
+      console.log('changed: ', this.data[roomType][0]['data']);
+      if (this.chart) {
+        this.chart.series.forEach((element, index, arr) => {
+          console.log(arr);
+          try {
+            arr[index].setData(this.data[roomType][index]['data']);
+          } catch (e) {
+          }
+        });
+        this.chart.redraw();
+      }
+      // this.sChart.nativeElement.highCharts().series[0].set( _data[event.currentValue], false);
     }
-    // this.sChart.nativeElement.highCharts().series[0].set( _data[event.currentValue], false);
   }
 
 }

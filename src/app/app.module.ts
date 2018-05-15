@@ -17,7 +17,6 @@ import * as FintTheme from 'fusioncharts/themes/fusioncharts.theme.fint';
 import { FusionChartsModule } from 'angular4-fusioncharts';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { PopupComponent } from './micro/popup/popup.component';
-import { ChartModule } from 'angular2-highcharts';
 import { HighChartComponent } from './micro/high-chart/high-chart.component';
 import { Dash1Component } from './charts/dash1/dash1.component';
 import { Dash2Component } from './charts/dash2/dash2.component';
@@ -32,6 +31,10 @@ import { Pred3Component } from './charts/pred3/pred3.component';
 import { Pred4Component } from './charts/pred4/pred4.component';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { Pred5Component } from './charts/pred5/pred5.component';
+import { Pred6Component } from './charts/pred6/pred6.component';
+import { Pred7Component } from './charts/pred7/pred7.component';
+import { Pred8Component } from './charts/pred8/pred8.component';
 
 
 @NgModule({
@@ -58,12 +61,15 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     Pred2Component,
     Pred3Component,
     Pred4Component,
+    Pred5Component,
+    Pred6Component,
+    Pred7Component,
+    Pred8Component,
   ],
   imports: [
     BrowserModule,
     RoutingModule,
     FusionChartsModule.forRoot(FusionCharts, Charts, FintTheme),
-    ChartModule.forRoot('highcharts')
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]

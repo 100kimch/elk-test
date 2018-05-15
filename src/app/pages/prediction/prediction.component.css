@@ -18,7 +18,7 @@
 
 .crossBox app-group {
   display: block;
-  height: 255px;
+  height: auto;
   overflow: hidden;
   margin: 0;
 }
@@ -36,6 +36,7 @@
   justify-content: space-between;
 }
 
+
 #p1 img{
   display: inline-block;
   width: 140px;
@@ -46,17 +47,48 @@
   border-radius: 2em 0 2em 0;
 }
 
+#recommendBox {
+  height: 400px;
+}
+
 #recommendBox li {
   list-style: none;
-  display: flex;
+  display: block;
   justify-content: space-around;
+  padding: 0.7em 1em;
+}
+
+#recommendBox li + li {
+  border-top: 1px solid #ccc;
 }
 
 #recommendBox img {
-  flex: 1;
+  display: block;
+  flex: none;
+  width: 120px;
+  height: 30px;
+  object-fit: cover;
+}
+
+#recommendBox img#hc {
+  object-fit: contain
 }
 
 #recommendBox h1 {
-  font-size: 48px;
-  text-align: center;
+  display: inline-block;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 130%;
+  margin: 0;
+  color: rgb(87, 33, 33);
+}
+
+#recommendBox h2 {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0;
+  color: rgb(138, 58, 58);
+
 }

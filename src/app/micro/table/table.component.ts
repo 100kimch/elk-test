@@ -25,6 +25,9 @@ export class TableComponent implements OnInit {
       this.records.push(this.editDataPlatform(this.priceList));
       // this.selected = this.priceList[this.type];
     }
+    if (this.type === 'predictionList') {
+      this.records.push(this.editDataPrediction(this.priceList));
+    }
 
     console.log('records:', this.records);
   }
@@ -92,18 +95,31 @@ export class TableComponent implements OnInit {
       }
     }
 
-    // let _object = { 'platform': '', 'isEnd': false };
-    // let index = '';
-    // // tslint:disable-next-line:forin
-    // for (const object in priceList) {
-    //   if (priceList[object]['platform'] !== index) {
-    //     index = priceList[object]['platform'];
-    //     _object['isEnd'] = true;
-    //   } else {
-    //     priceList[object]['platform'] = '';
-    //   }
-    //   _object = priceList[object];
-    // }
+    return dataList;
+  }
+  editDataPrediction(priceList) {
+    const dataList = [];
+
+    // tslint:disable-next-line:forin
+    for (const category in priceList) {
+      console.log(priceList, priceList[category]);
+      // tslint:disable-next-line:forin
+      for (const num in priceList[category][0]['date']) {
+        const selected = priceList[category][0];
+        const _object = {
+          'date': undefined,
+          'roomname': '',
+          'value': '',
+          'isEnd': false
+        };
+
+        _object['date'] = new Date(selected['date'][num]).toLocaleDateString();
+        _object['roomname'] = priceList[category][0]['roomname'];
+        _object['value'] = selected['data'][num];
+        // _object['roomtype'] = category;
+        dataList.push(_object);
+      }
+    }
 
     return dataList;
   }

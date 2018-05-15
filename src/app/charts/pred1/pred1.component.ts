@@ -10,12 +10,13 @@ export class Pred1Component implements AfterViewInit, OnChanges {
   @Input('roomType') roomType;
   @ViewChild('chart') sChart;
 
+  data;
   chart;
 
   constructor() { }
 
   ngAfterViewInit() {
-    const data = _data[this.roomType];
+    this.data = _data;
 
     const Highcharts = window['Highcharts'];
 
@@ -25,7 +26,8 @@ export class Pred1Component implements AfterViewInit, OnChanges {
         backgroundColor: 'transparent',
         spacingLeft: 20,
         spacingRight: 40,
-        type: 'line'
+        type: 'line',
+        height: '400px'
       },
       plotOptions: {
         lineWidth: 5
@@ -66,23 +68,40 @@ export class Pred1Component implements AfterViewInit, OnChanges {
 
       },
 
-      series: data
+      series: this.data[this.roomType]
     });
   }
 
   ngOnChanges(event) {
-    const roomType = event.roomType.currentValue;
-    console.log('changed: ', _data[roomType][0]['data']);
-    if (this.chart) {
-      this.chart.series.forEach((element, index, arr) => {
-        console.log(arr);
+    if (this.data) {
+      if (event.roomType.currentValue) {
+        this.roomType = event.roomType.currentValue;
+      }
+      console.log('changed: ', this.data[this.roomType]);
+      // tslint:disable-next-line:forin
+      for (const num in this.data[this.roomType]) {
+        console.log('num: ', num);
         try {
-          arr[index].setData(_data[roomType][index]['data']);
+          this.chart.series[num].setData(this.data[this.roomType][num]['data']);
         } catch (e) {
+          console.error(e);
         }
-      });
+      }
+
+      // if (this.chart) {
+      //   this.chart.series.forEach((element, index, arr) => {
+      //     if (this.data[this.roomType][index]) {
+      //       console.log('arr: ', index, this.data[this.roomType][index]);
+      //       try {
+      //         arr[index].setData(this.data[this.roomType][index]['data']);
+      //       } catch (e) {
+      //         console.log('error: ', e);
+      //       }
+      //     }
+      //   });
       this.chart.redraw();
     }
     // this.sChart.nativeElement.highCharts().series[0].set( _data[event.currentValue], false);
   }
 }
+

@@ -18,7 +18,7 @@
 :host>li img {
   float: left;
   margin: 0.75em 0.5em;
-  height: 72px;
+  width: 72px;
 }
 
 #t1 {
@@ -63,6 +63,8 @@ h2 {
   font-size: 1em;
   margin: 0.1em;
   text-align: right;
+  word-wrap: normal;
+  white-space: nowrap;
 }
 
 h3 {

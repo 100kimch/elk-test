@@ -3,6 +3,7 @@
     <!-- <span class="cell" *ngFor="let category of categories[type]" [innerHTML]="category"></span> -->
     <span class="cell" *ngIf="type==='priceList'">Location</span>
     <span class="cell" *ngIf="type==='platformList'">Platform</span>
+    <span class="cell" *ngIf="type==='predictionList'">Date</span>
     <span class="cell">Room</span>
     <span class="cell">Price</span>
   </header>
@@ -12,6 +13,7 @@
   <div class="row" *ngFor="let record of records[0]" [ngClass]="{'endline': record['isEnd']}" [id]="record['roomtype']" (click)="onClick($event)">
     <span class="cell" *ngIf="type==='priceList'">{{ record['name'] }}</span>
     <span class="cell" *ngIf="type==='platformList'">{{ record['platform'] }}</span>
+    <span class="cell" *ngIf="type==='predictionList'">{{ record['date'] }}</span>
     <!-- <span class="cell" *ngIf="type==='platformList'">{{ record['platform'] }}</span> -->
     <span class="cell">{{ record['roomname'] }}</span>
     <span class="cell currency">{{ toCurrencyFormat(record['value']) }}</span>

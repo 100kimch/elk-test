@@ -116,7 +116,7 @@ h1 {
   border: none;
 }
 
-:host /deep/ input[type="date"] {
+/* :host /deep/ input[type="date"] {
   position: relative;
   margin-top: -34px;
   margin-right: 5px;
@@ -126,4 +126,4 @@ h1 {
   border-radius: 10px; 
   border: none;
   text-align: center;
-}
+} */
