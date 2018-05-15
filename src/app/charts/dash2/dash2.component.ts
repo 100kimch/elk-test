@@ -19,7 +19,7 @@ export class Dash2Component implements AfterViewInit {
       },
       colors: ['#6F61CB', '#A196EB'],
       title: {
-        text: 'Total: 210',
+        text: 'Total: 135',
         verticalAlign: 'middle'
       },
       plotOptions: {
@@ -43,10 +43,10 @@ export class Dash2Component implements AfterViewInit {
         name: 'Amount',
         data: [{
           'name': 'Quantity',
-          'y': 195
+          'y': 192
         }, {
           'name': 'Block Sales',
-          'y': 15
+          'y': 57
         }]
       }]
     });

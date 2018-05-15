@@ -19,7 +19,7 @@ export class Dash1Component implements AfterViewInit {
       },
       colors: ['#CB6161', '#ED8383'],
       title: {
-        text: '<p>34 Reserved</p>',
+        text: '<p>7 Available</p>',
         verticalAlign: 'middle'
       },
       plotOptions: {
@@ -44,7 +44,7 @@ export class Dash1Component implements AfterViewInit {
         name: 'Amount',
         data: [{
           'name': 'Avg. Week',
-          'y': 185
+          'y': 12
         }]
       },
       {
@@ -54,7 +54,7 @@ export class Dash1Component implements AfterViewInit {
         name: 'Amount',
         data: [{
           'name': 'Available',
-          'y': 34
+          'y': 7
         }]
       }]
     });
