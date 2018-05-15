@@ -21,12 +21,12 @@
   </div>
 
   <div class="row" *ngIf="cPage==2">
-    <app-group [title]="'Prediction'" class="f2">
+    <app-group [title]="'Forecast Price'" class="f2">
       <app-pred2 [roomType]="chartData['pred_2']"></app-pred2>
       <!-- <app-fusion-chart [gid]="'pred_2'" [priceList]="chartData['pred_2']"></app-fusion-chart> -->
     </app-group>
     <!-- <iframe [src]="clean(chartUrl)"></iframe> -->
-    <app-group [title]="'Forecast Price'">
+    <app-group [title]="'Recommended'">
       <app-table [type]="'predictionList'" [priceList]="priceList" (chartDataType)="setDataset2($event)"></app-table>
     </app-group>
     <app-group [title]="'Online Price'">
