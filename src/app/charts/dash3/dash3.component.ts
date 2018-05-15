@@ -19,7 +19,7 @@ export class Dash3Component implements AfterViewInit {
       },
       colors: ['#737373', '#738A97'],
       title: {
-        text: '<b>7201</b>/37000',
+        text: '<b>72K</b>/281K',
         verticalAlign: 'middle'
       },
       plotOptions: {
@@ -43,10 +43,10 @@ export class Dash3Component implements AfterViewInit {
         name: 'Amount',
         data: [{
           'name': 'Quantity',
-          'y': 7201
+          'y': 72010
         }, {
             'name': 'Price Quantity',
-          'y': 36799
+          'y': 281000
         }]
       }]
     });

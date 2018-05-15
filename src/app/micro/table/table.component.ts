@@ -32,6 +32,18 @@ export class TableComponent implements OnInit {
     console.log('records:', this.records);
   }
 
+  compareByName(a, b) {
+    const sortingArr = ['VAA', 'AAB', 'BAA'];
+    if (a.name < b.name || sortingArr.indexOf(a.roomname) < sortingArr.indexOf(b.roomname)) { return -1; }
+    if (a.name > b.name || sortingArr.indexOf(a.roomname) > sortingArr.indexOf(b.roomname)) { return 1; }
+    return 0;
+  }
+  compareByDate(a, b) {
+    const sortingArr = ['VAA', 'AAB', 'BAA'];
+    if (a.date < b.date || sortingArr.indexOf(a.roomname) < sortingArr.indexOf(b.roomname)) { return -1; }
+    if (a.date > b.date || sortingArr.indexOf(a.roomname) > sortingArr.indexOf(b.roomname)) { return 1; }
+    return 0;
+  }
   editDataPrice(priceList) {
     const dataList = [];
     let index = '';
@@ -62,7 +74,7 @@ export class TableComponent implements OnInit {
       }
     }
 
-    return dataList;
+    return dataList.sort(this.compareByName);
   }
   editDataPlatform(priceList) {
     const dataList = [];
@@ -121,7 +133,7 @@ export class TableComponent implements OnInit {
       }
     }
 
-    return dataList;
+    return dataList.sort(this.compareByDate);
   }
 
   onClick(event) {

@@ -44,10 +44,10 @@ export class Dash4Component implements AfterViewInit {
         name: 'Amount',
         data: [{
           'name': 'Avg.High',
-          'y': 507
+          'y': 57000
         }, {
           'name': 'Avg.Low',
-          'y': 405
+          'y': 42000
         }]
       }]
     });

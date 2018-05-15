@@ -44,7 +44,7 @@ export class Dash1Component implements AfterViewInit {
         name: 'Amount',
         data: [{
           'name': 'Avg. Rooms',
-          'y': 13
+          'y': 172
         }]
       },
       {
@@ -53,8 +53,8 @@ export class Dash1Component implements AfterViewInit {
         zMin: 0,
         name: 'Amount',
         data: [{
-          'name': 'Quantity',
-          'y': 2
+          'name': 'Reserved',
+          'y': 168
         }]
       }]
     });

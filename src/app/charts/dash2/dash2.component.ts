@@ -19,7 +19,7 @@ export class Dash2Component implements AfterViewInit {
       },
       colors: ['#6F61CB', '#A196EB'],
       title: {
-        text: 'Total: 149',
+        text: 'Total: 192',
         verticalAlign: 'middle'
       },
       plotOptions: {

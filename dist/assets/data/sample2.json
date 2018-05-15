@@ -1,6 +1,6 @@
 {
   "BAA": [{
-      "name": "Black Sands Hotel",
+      "name": "Black Sands",
       "roomname": "BAA",
       "date": [
         1512086400000,
@@ -36,7 +36,7 @@
       ]
     },
     {
-      "name": "Hotel Regent Marin the Blue",
+      "name": "Regent Marin the Blue",
       "roomname": "BAA",
       "date": [
         1512086400000,
@@ -109,7 +109,7 @@
     }
   ],
   "AAB": [{
-      "name": "Black Sands Hotel",
+      "name": "Black Sands",
       "roomname": "AAB",
       "date": [
         1512086400000,
@@ -145,7 +145,7 @@
       ]
     },
     {
-      "name": "Hotel Regent Marin the Blue",
+      "name": "Regent Marin the Blue",
       "roomname": "AAB",
       "date": [
         1512086400000,
@@ -218,7 +218,7 @@
     }
   ],
   "VAA": [{
-      "name": "Black Sands Hotel",
+      "name": "Black Sands",
       "roomname": "VAA",
       "date": [
         1512086400000,
@@ -254,7 +254,7 @@
       ]
     },
     {
-      "name": "Hotel Regent Marin the Blue",
+      "name": "Regent Marin the Blue",
       "roomname": "VAA",
       "date": [
         1512086400000,

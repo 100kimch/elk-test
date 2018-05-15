@@ -71,7 +71,7 @@ import { Pred8Component } from './charts/pred8/pred8.component';
     RoutingModule,
     FusionChartsModule.forRoot(FusionCharts, Charts, FintTheme),
   ],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

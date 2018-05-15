@@ -26,6 +26,8 @@ body {
 
 section {
   width: calc(100% - 2em);
+  height: calc(100vh - 91px);
+  overflow-y: scroll;
   border-radius: 1em;
   padding: 1em 3em 3em 3em;
   margin: 0 1em;

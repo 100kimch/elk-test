@@ -7,22 +7,17 @@ import { DashboardComponent } from '../pages/dashboard/dashboard.component';
 const routes: Routes = [
   {
     path: '',
-    children: [
-      {
-        path: '',
-        redirectTo: 'prediction',
-        pathMatch: 'full'
-      },
-      {
-        path: 'prediction',
-        component: PredictionComponent,
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent,
-      }
-    ],
+    redirectTo: 'prediction',
+    pathMatch: 'full'
   },
+  {
+    path: 'prediction',
+    component: PredictionComponent,
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+  }
 ];
 
 @NgModule({
