@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as googlenlp from '@google-cloud/language';
 
 @Component({
   selector: 'app-analysis',
@@ -9,7 +10,7 @@ export class AnalysisComponent implements OnInit {
   data = [
     {
       'address': 'hello@naver.com',
-      'title': 'Problems to book',
+      'title': 'I am traveling to Gyeongju...',
       'date': '04/30/2018',
       'no': 0,
       // tslint:disable-next-line:max-line-length
@@ -17,7 +18,7 @@ export class AnalysisComponent implements OnInit {
     },
     {
       'address': 'waiting212@naver.com',
-      'title': 'Problems to book',
+      'title': 'Hi,I stayed in your...',
       'date': '04/12/2018',
       'no': 1,
       // tslint:disable-next-line:max-line-length
@@ -25,7 +26,7 @@ export class AnalysisComponent implements OnInit {
     },
     {
       'address': 'doiquest1@naver.com',
-      'title': 'Problems to book',
+      'title': 'Dear Sir/Madame,...',
       'date': '04/07/2018',
       'no': 2,
       // tslint:disable-next-line:max-line-length
@@ -33,7 +34,7 @@ export class AnalysisComponent implements OnInit {
     },
     {
       'address': 'qwertdk@naver.com',
-      'title': 'Problems to book',
+      'title': 'I need an air - conditioned room..',
       'date': '04/06/2018',
       'no': 3,
       // tslint:disable-next-line:max-line-length
@@ -57,14 +58,37 @@ export class AnalysisComponent implements OnInit {
     },
   ];
   selected;
+  client;
 
   constructor() { }
 
   ngOnInit() {
+    // this.client = new googlenlp['']();
   }
 
   change(event) {
     this.selected = this.data[event];
+
+    // const document = {
+    //   content: this.selected.contents,
+    //   type: 'PLAIN_TEXT'
+    // };
+
+    // this.client
+    //   .classifyText({ document: document })
+    //   .then(results => {
+    //     const classification = results[0];
+
+    //     console.log('Categories:');
+    //     classification.categories.forEach(category => {
+    //       console.log(
+    //         `Name: ${category.name}, Confidence: ${category.confidence}`
+    //       );
+    //     });
+    //   })
+    //   .catch(err => {
+    //     console.error('ERROR:', err);
+    //   });
   }
 
 }
