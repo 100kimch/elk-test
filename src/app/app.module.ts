@@ -35,6 +35,9 @@ import { Pred5Component } from './charts/pred5/pred5.component';
 import { Pred6Component } from './charts/pred6/pred6.component';
 import { Pred7Component } from './charts/pred7/pred7.component';
 import { Pred8Component } from './charts/pred8/pred8.component';
+import { AnalysisComponent } from './pages/analysis/analysis.component';
+import { AnalysisTileComponent } from './micro/analysis-tile/analysis-tile.component';
+import { MemberTableComponent } from './micro/member-table/member-table.component';
 
 
 @NgModule({
@@ -65,6 +68,9 @@ import { Pred8Component } from './charts/pred8/pred8.component';
     Pred6Component,
     Pred7Component,
     Pred8Component,
+    AnalysisComponent,
+    AnalysisTileComponent,
+    MemberTableComponent,
   ],
   imports: [
     BrowserModule,

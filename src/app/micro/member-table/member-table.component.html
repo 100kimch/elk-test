@@ -1,0 +1,12 @@
+<div id="container">
+  <header>
+    <span class="cell">Mail</span>
+    <span class="cell">Title</span>
+    <span class="cell">Date</span>
+  </header>
+  <div class="row" *ngFor="let record of inputData" [id]="record['no']" (click)="select($event)">
+    <div class="cell">{{ record['address'] }}</div>
+    <div class="cell">{{ record['title'] }}</div>
+    <div class="cell">{{ record['date'] }}</div>
+  </div>
+</div>

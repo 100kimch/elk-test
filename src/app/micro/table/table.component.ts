@@ -18,15 +18,16 @@ export class TableComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.type === 'priceList') {
-      this.records.push(this.editDataPrice(this.priceList));
-    }
-    if (this.type === 'platformList') {
-      this.records.push(this.editDataPlatform(this.priceList));
-      // this.selected = this.priceList[this.type];
-    }
-    if (this.type === 'predictionList') {
-      this.records.push(this.editDataPrediction(this.priceList));
+    switch (this.type) {
+      case 'priceList':
+        this.records.push(this.editDataPrice(this.priceList));
+        break;
+      case 'platformList':
+        this.records.push(this.editDataPlatform(this.priceList));
+        break;
+      case 'predictionList':
+        this.records.push(this.editDataPrediction(this.priceList));
+        break;
     }
 
     console.log('records:', this.records);

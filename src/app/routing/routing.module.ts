@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from '../app.component';
 import { PredictionComponent } from '../pages/prediction/prediction.component';
 import { DashboardComponent } from '../pages/dashboard/dashboard.component';
+import { AnalysisComponent } from '../pages/analysis/analysis.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+  },
+  {
+    path: 'analysis',
+    component: AnalysisComponent
   }
 ];
 

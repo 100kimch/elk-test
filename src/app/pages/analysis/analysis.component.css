@@ -1,0 +1,169 @@
+:host {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: block;
+}
+
+.main {
+  width: 100%;
+}
+
+.main div + div {
+  margin-left: .25em;
+}
+
+.f1 {
+  flex: 1;
+}
+
+.f2 {
+  flex: 2;
+}
+
+.crossBox {
+  flex: 2;
+  display: block;
+  margin-left: 4px;
+}
+
+.crossBox app-group {
+  display: block;
+  height: auto;
+  overflow: hidden;
+  margin: 0;
+}
+
+.crossBox app-group+app-group {
+  margin-top: 4px;
+}
+
+#p1 /deep/ #popupBox {
+  background: #999;
+  color: #fff;
+}
+
+#p1 /deep/ #popupBox #lists {
+  display: flex;
+  justify-content: space-between;
+}
+
+#p1 img {
+  display: inline-block;
+  width: 140px;
+  height: 70px;
+  margin: 1em;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 2em 0 2em 0;
+}
+
+#recommendBox {
+  height: 400px;
+}
+
+#recommendBox li {
+  list-style: none;
+  display: block;
+  justify-content: space-around;
+  padding: 0.7em 1em;
+}
+
+#recommendBox li+li {
+  border-top: 1px solid #ccc;
+}
+
+#recommendBox img {
+  display: block;
+  flex: none;
+  width: 120px;
+  height: 30px;
+  object-fit: cover;
+}
+
+#recommendBox img#hc {
+  object-fit: contain
+}
+
+#recommendBox h1 {
+  display: inline-block;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 130%;
+  margin: 0;
+  color: rgb(87, 33, 33);
+}
+
+#recommendBox h2 {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0;
+  color: rgb(138, 58, 58);
+}
+
+#percentageBox /deep/ article {
+  background: #ccc;
+  margin-bottom: -15px;
+}
+
+#percentageBox li {
+  list-style: none;
+  width: 47%;
+  margin: 1.3%;
+  background: #999;
+  display: inline-flex;
+}
+
+#percentageBox li:hover {
+  background: #aaa;
+}
+
+#percentageBox h1 {
+  flex: 3;
+  padding-left: 1em;
+  border-left: 3px  solid #666;
+  margin: 20px 0;
+  line-height: 150%;
+  font-weight: 300;
+  color: white;
+}
+
+#percentageBox p {
+  flex: 2;
+  background: #666;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+}
+
+#mail /deep/ article{
+  min-height: 365px;
+  height: 365px;
+  overflow: hidden;
+}
+
+#mail div{
+  padding: 1em;
+  min-height: 297px;
+  height: 297px;
+  overflow-y: scroll;
+}
+
+#mail h1 {
+  font-size: 14px;
+  margin: 0.5em;
+}
+
+#mail pre {
+  max-width: 700px;
+  line-height: 130%;
+  margin: 0 0.5em;
+  font-family: initial;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}

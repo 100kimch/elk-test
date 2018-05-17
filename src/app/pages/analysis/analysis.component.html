@@ -1,0 +1,53 @@
+<div id="path">
+  Analysis > NLP Process
+</div>
+
+<section>
+  <h1>Overview</h1>
+  <div class="main row">
+    <div class="f1">
+      <app-analysis-tile></app-analysis-tile>
+      <app-group [title]="'Team Members'" class="f2">
+        <app-member-table [type]="'memberList'" [inputData]="data" (change)="change($event)"></app-member-table>
+      </app-group>
+    </div>
+    <div class="f1">
+      <app-group id="percentageBox" [title]="'NLP Analysis'">
+        <li>
+          <h1>Reservation</h1>
+          <p>81%</p>
+        </li>
+        <li>
+          <h1>Cancellation</h1>
+          <p>8%</p>
+        </li>
+        <li>
+          <h1>Question</h1>
+          <p>18%</p>
+        </li>
+        <li>
+          <h1>Schedule Change</h1>
+          <p>28%</p>
+        </li>
+        <li>
+          <h1>Reply Request</h1>
+          <p>25%</p>
+        </li>
+        <li>
+          <h1>Confirmation</h1>
+          <p>3%</p>
+        </li>
+      </app-group>
+      <app-group id="mail" [title]="'Mail Contents'">
+        <div *ngIf="selected">
+          <h1>From: {{ selected['address'] }}</h1>
+          <h1>To: es3_manager@hoteles3.com</h1>
+          <h1>Date: {{ selected['date'] }}</h1>
+          <h1>Subject: {{ selected['title'] }} </h1>
+          <hr>
+          <pre [innerHTML]="selected['contents']"></pre>
+        </div>
+      </app-group>
+    </div>
+  </div>
+</section>
