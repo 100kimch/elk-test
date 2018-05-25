@@ -1,0 +1,228 @@
+:host {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: block;
+  color: white;
+  font-weight: 300;
+}
+
+.f1 {
+  flex: 1;
+}
+
+.f2 {
+  flex: 2;
+}
+
+.shadowBox {
+  background: url('/assets/img/bg_hotel.png');
+  background-size: cover;
+}
+
+section h1 {
+  flex: none;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  font-size: 3.5em;
+  font-weight: 300;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  display: inline-block;
+}
+
+.row {
+  width: 100%;
+  overflow-x: auto;
+}
+.row article {
+  margin: 20px;
+  min-width: 600px;
+  flex-wrap: wrap
+  /* padding: 20px; */
+}
+
+.row h2 {
+  font-weight: 300;
+}
+
+.subInfo {
+  margin: 0;
+  padding: 1em 1em;
+  opacity: 0.8;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  transition: opacity 0.5s;
+  overflow-x: auto;
+}
+
+.subInfo:hover {
+  opacity: 1;
+}
+
+.subInfo div {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.subInfo div + div {
+  margin-top: 1em;
+}
+
+.subInfo h2 {
+  flex: none;
+  width: 4em;
+  font-weight: 500;
+  font-size: 1em;
+  text-align: left;
+  padding-left: 1em;
+  border-left: 1px solid white;
+  line-height: 1.2em;
+  margin: 0;
+  margin-left: 1em;  
+}
+
+.subInfo ul {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  margin: 0;
+}
+
+.subInfo li {
+  flex: 1;
+  margin: 0.25em;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ccc;
+  padding: 0.5em 0.5em 0 0.5em;
+}
+
+.subInfo li:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.subInfo li img {
+  display: block;
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.subInfo li{
+  line-height: 30px;
+}
+
+.subInfo p {
+  flex: none;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.2em;
+  margin: 0;
+}
+
+.lineBox {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 0.5em;
+}
+
+.lineBox + .lineBox {
+  border-top: none;
+}
+
+.lineBox span {
+  display: flex;
+}
+
+.lineBox h3 {
+  flex: none;
+  width: 4em;
+  text-align: center;
+  margin: 0 1em;
+  line-height: 58.75px;
+}
+
+.lineBox input,
+.lineBox select {
+  border: none;
+  /* border: 1px solid white; */
+  border-radius: 0;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1.13em;
+}
+
+.lineBox select {
+  width: 4em;
+  height: 58.75px;
+  padding: 0 1em;
+}
+.lineBox input {
+  flex: 1;
+  height: 58.75px;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
+
+.lineBox h3 {
+  display: inline-block;
+  font-weight: 300;
+}
+
+.lineBox p {
+  font-size: 1.13em;
+}
+
+.lineBox .price h3 {
+  line-height: 103px;
+}
+.lineBox .price p{
+  font-size: 2em;
+}
+
+.btnBlue {
+  width: 100%;
+  background: rgba(0, 166, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1em;
+  padding: 1em 0;
+  outline: none;
+  transition: background 0.5s;
+}
+
+.btnBlue:hover {
+  background: rgba(0, 166, 255, 0.4);
+}
+
+#imgDrawer {
+  display: flex;
+  flex-direction: row;
+}
+
+#imgNav {
+  display: flex;
+  height: 420px;
+  flex: none;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 0.25em;
+}
+
+#imgNav img {
+  width: 150px;
+  height: auto;  
+}
+
+#imgDrawer>img {
+  flex: 1;
+  width: 300px;
+  height: 420px;
+  object-fit: cover;
+}

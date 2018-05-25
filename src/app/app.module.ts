@@ -38,6 +38,8 @@ import { Pred8Component } from './charts/pred8/pred8.component';
 import { AnalysisComponent } from './pages/analysis/analysis.component';
 import { AnalysisTileComponent } from './micro/analysis-tile/analysis-tile.component';
 import { MemberTableComponent } from './micro/member-table/member-table.component';
+import { MicroSitesComponent } from './pages/micro-sites/micro-sites.component';
+import { Homp1Component } from './charts/homp1/homp1.component';
 
 
 @NgModule({
@@ -71,6 +73,8 @@ import { MemberTableComponent } from './micro/member-table/member-table.componen
     AnalysisComponent,
     AnalysisTileComponent,
     MemberTableComponent,
+    MicroSitesComponent,
+    Homp1Component,
   ],
   imports: [
     BrowserModule,
