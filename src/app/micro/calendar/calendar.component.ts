@@ -23,6 +23,10 @@ export class CalendarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.setCalendar();
+  }
+
+  setCalendar() {
     const today = new Date();
     // console.log(today.getDay(), today.getDate());
     const future = new Date();
@@ -62,6 +66,8 @@ export class CalendarComponent implements OnInit {
   }
 
   addRecord(records) {
+    const ref = this.myPostDirective.viewContainerRef;
+    ref.clear();
     let count = 6, week;
     // tslint:disable-next-line:forin
     for (const record in records) {

@@ -13,7 +13,7 @@ export class MicroSitesComponent implements OnInit {
     'value2': 0,
     'value3': 0,
     'type': '',
-    'dataStr': ''
+    'dateStr': ''
   };
 
   constructor(
