@@ -5,6 +5,7 @@ import { PostItem } from '../../models/postItem';
 import { WeekComponent } from '../week/week.component';
 import { DayComponent } from '../day/day.component';
 import { MonthComponent } from '../month/month.component';
+import { DatePickerService } from '../date-picker.service';
 
 @Component({
   selector: 'app-calendar',
@@ -20,13 +21,34 @@ export class CalendarComponent implements OnInit {
 
   constructor(
     private postingService: PostingService,
-  ) { }
-
-  ngOnInit() {
-    this.setCalendar();
+    private datePickerService: DatePickerService
+  ) {
+    this.datePickerService.changeType.subscribe(
+      data => {
+        this.records = [];
+        switch (data) {
+          case 'STANDARD':
+            this.setCalendar(60000);
+            break;
+          case 'DELUXE':
+            this.setCalendar(70000);
+            break;
+          case 'JUNIOR SWEET':
+            this.setCalendar(100000);
+            break;
+          case 'ROYAL SWEET':
+            this.setCalendar(120000);
+            break;
+        }
+      }
+    );
   }
 
-  setCalendar() {
+  ngOnInit() {
+    this.setCalendar(0);
+  }
+
+  setCalendar(defaultPrice) {
     const today = new Date();
     // console.log(today.getDay(), today.getDate());
     const future = new Date();
@@ -42,7 +64,12 @@ export class CalendarComponent implements OnInit {
 
     // adding dates
     for (let i = 0; i < 63; i++) {
-      const value = 70000 + parseInt(Math.random() * 50000 + '', 10);
+      let value;
+      if (defaultPrice === 0) {
+        value = 0;
+      } else {
+        value = defaultPrice + parseInt(Math.random() * 50000 + '', 10);
+      }
       const record = {
         dateStr: future.toDateString(),
         value: value.toLocaleString(),

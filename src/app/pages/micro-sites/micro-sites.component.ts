@@ -38,6 +38,11 @@ export class MicroSitesComponent implements OnInit {
   ngOnInit() {
   }
 
+  setType(type) {
+    this.current.type = type;
+    this.datePickerService.emitType(type);
+  }
+
   setHotel(type) {
   }
 

@@ -44,16 +44,16 @@
         <h2>Select Room For</h2>
         <div class="typeList">
           <ul>
-            <li [ngClass]="{'selected': current.type == 'STANDARD'}" (click)="current.type = 'STANDARD'">
+            <li [ngClass]="{'selected': current.type == 'STANDARD'}" (click)="setType('STANDARD')">
               <img src="/assets/img/h_sands1.jpg"> STANDARD
             </li>
-            <li [ngClass]="{'selected': current.type == 'DELUXE'}" (click)="current.type = 'DELUXE'">
+            <li [ngClass]="{'selected': current.type == 'DELUXE'}" (click)="setType('DELUXE')">
               <img src="/assets/img/h_sands2.jpg"> DELUXE
             </li>
-            <li [ngClass]="{'selected': current.type == 'JUNIOR SWEET'}" (click)="current.type = 'JUNIOR SWEET'">
+            <li [ngClass]="{'selected': current.type == 'JUNIOR SWEET'}" (click)="setType('JUNIOR SWEET')">
               <img src="/assets/img/h_sands3.jpg"> JUNIOR SWEET
             </li>
-            <li [ngClass]="{'selected': current.type == 'ROYAL SWEET'}" (click)="current.type = 'ROYAL SWEET'">
+            <li [ngClass]="{'selected': current.type == 'ROYAL SWEET'}" (click)="setType('ROYAL SWEET')">
               <img src="/assets/img/h_sands4.jpg"> ROYAL SWEET
             </li>
           </ul>
