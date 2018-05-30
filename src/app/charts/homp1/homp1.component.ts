@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-homp1',
   templateUrl: './homp1.component.html',
   styleUrls: ['./homp1.component.css']
 })
-export class Homp1Component implements OnInit {
+export class Homp1Component implements AfterViewInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngAfterViewInit() {
 
     const locations = [{
       lat: 37.5689897,

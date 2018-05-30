@@ -40,7 +40,12 @@ import { AnalysisTileComponent } from './micro/analysis-tile/analysis-tile.compo
 import { MemberTableComponent } from './micro/member-table/member-table.component';
 import { MicroSitesComponent } from './pages/micro-sites/micro-sites.component';
 import { Homp1Component } from './charts/homp1/homp1.component';
-
+import { CalendarComponent } from './micro/calendar/calendar.component';
+import { MyPostDirective } from './directives/my-post.directive';
+import { DayComponent } from './micro/day/day.component';
+import { WeekComponent } from './micro/week/week.component';
+import { MyPost2Directive } from './directives/my-post2.directive';
+import { MonthComponent } from './micro/month/month.component';
 
 @NgModule({
   declarations: [
@@ -75,11 +80,22 @@ import { Homp1Component } from './charts/homp1/homp1.component';
     MemberTableComponent,
     MicroSitesComponent,
     Homp1Component,
+    CalendarComponent,
+    MyPostDirective,
+    DayComponent,
+    WeekComponent,
+    MyPost2Directive,
+    MonthComponent,
   ],
   imports: [
     BrowserModule,
     RoutingModule,
     FusionChartsModule.forRoot(FusionCharts, Charts, FintTheme),
+  ],
+  entryComponents: [
+    WeekComponent,
+    DayComponent,
+    MonthComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

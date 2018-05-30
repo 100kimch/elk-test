@@ -3,12 +3,6 @@ article {
   height: 420px;
   /* padding: 0.5em; */
   border: 1px solid white;
-  opacity: 0.8;
-  transition: opacity 0.5s;
-}
-
-article:hover {
-  opacity: 1;
 }
 
 #map {

@@ -15,27 +15,27 @@
       <app-group id="percentageBox" [title]="'NLP Analysis'">
         <li>
           <h1>Reservation</h1>
-          <p>81%</p>
+          <p>{{ selected['value'][0] + '%' }}</p>
         </li>
         <li>
           <h1>Cancellation</h1>
-          <p>8%</p>
+          <p>{{ selected['value'][1] + '%' }}</p>
         </li>
         <li>
           <h1>Question</h1>
-          <p>18%</p>
+          <p>{{ selected['value'][2] + '%' }}</p>
         </li>
         <li>
           <h1>Schedule Change</h1>
-          <p>28%</p>
+          <p>{{ selected['value'][3] + '%' }}</p>
         </li>
         <li>
           <h1>Reply Request</h1>
-          <p>25%</p>
+          <p>{{ selected['value'][4] + '%' }}</p>
         </li>
         <li>
           <h1>Confirmation</h1>
-          <p>3%</p>
+          <p>{{ selected['value'][5] + '%' }}</p>
         </li>
       </app-group>
       <app-group id="mail" [title]="'Mail Contents'">
